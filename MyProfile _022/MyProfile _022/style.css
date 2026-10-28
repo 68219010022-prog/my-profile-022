@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+    
+ body{
+    font-family: sans-serif;
+    background: white;
+    margin:  38px 16px;
+    color: black;
+    text-align: center;
+}
+
+.profile-card {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background: wheat;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(15, 39, 71, 0.12);
+}
+
+.profile-card {
+    line-height: 1.8;
+}
+
+.motto {
+    margin-top: 24px;
+    padding: 16px;
+    background: white;
+    border-left: 5px solid black;
+    border-radius: 8px;
+}
+
+.motto h2 {
+    margin-top: 0;
+}
+
+.motto p {
+    margin-bottom: 0;
+}
+
+button {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border: 0;
+    border-radius: 8px;
+    background: blue;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.profile-img {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin: 24px auto 0;
+    border-radius: 50%;
+}
