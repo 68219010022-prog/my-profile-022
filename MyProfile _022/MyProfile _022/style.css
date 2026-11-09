@@ -176,6 +176,7 @@ h1 span {
 .profile-img {
     display: block;
     width: min(300px, 100%);
+    max-width: 100%;
     aspect-ratio: 1;
     border-radius: 24px;
     background: var(--soft);
@@ -358,6 +359,30 @@ h1 span {
     outline-offset: 3px;
 }
 
+@media (max-width: 900px) {
+    .hero {
+        gap: 36px;
+    }
+
+    .profile-img {
+        width: min(260px, 100%);
+    }
+
+    .content-section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    .skills-list {
+        gap: 12px;
+    }
+
+    .skills-list li {
+        gap: 12px;
+        padding: 16px;
+    }
+}
+
 @media (max-width: 700px) {
     .container {
         width: min(100% - 36px, 540px);
@@ -381,22 +406,34 @@ h1 span {
     .hero {
         min-height: auto;
         grid-template-columns: 1fr;
-        gap: 48px;
-        padding-top: 64px;
-        padding-bottom: 72px;
+        gap: 36px;
+        padding-top: 48px;
+        padding-bottom: 56px;
     }
 
     .hero-image-wrap {
         grid-row: 1;
     }
 
+    h1 {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
     .profile-img {
-        width: 220px;
+        width: min(220px, 72vw);
     }
 
     .content-section {
-        padding-top: 64px;
-        padding-bottom: 64px;
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .about-card {
+        padding: 22px;
     }
 
     .skills-list {
@@ -404,9 +441,13 @@ h1 span {
     }
 
     .project-card {
-        grid-template-columns: 42px 1fr;
-        gap: 14px;
-        padding: 22px;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 1.2rem;
     }
 
     .footer-content {
