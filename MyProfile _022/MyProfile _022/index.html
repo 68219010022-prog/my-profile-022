@@ -15,6 +15,7 @@
                 <li><a href="#about">เกี่ยวกับฉัน</a></li>
                 <li><a href="#skills">ทักษะ</a></li>
                 <li><a href="#projects">ผลงาน</a></li>
+                <li><a href="#estimator">ประเมินราคา</a></li>
             </ul>
         </nav>
     </header>
@@ -28,6 +29,7 @@
                     ชื่อเล่น เบลล์ — นักพัฒนามือใหม่ที่สนใจการสร้างเว็บไซต์
                     และกำลังเรียนรู้เทคโนโลยีใหม่ ๆ อยู่เสมอ
                 </p>
+                <p class="visitor-welcome" id="visitorWelcome" aria-live="polite"></p>
                 <a class="button button-primary" href="#projects">ชมผลงานของผม</a>
             </div>
             <div class="hero-image-wrap">
@@ -81,6 +83,16 @@
                         </ul>
                     </div>
                 </article>
+            </div>
+        </section>
+
+        <section class="content-section container" id="estimator" aria-labelledby="estimator-title">
+            <p class="eyebrow">วางแผนเว็บไซต์ของคุณ</p>
+            <h2 id="estimator-title">ประมาณการค่าบริการ</h2>
+            <div class="estimator-card">
+                <p>ค่าพัฒนาเว็บไซต์หน้าละ 500 บาท กดปุ่มเพื่อระบุจำนวนหน้าที่ต้องการ</p>
+                <button class="greet-button" id="estimateButton" type="button">คำนวณค่าบริการ</button>
+                <p class="estimator-result" id="estimatorResult" aria-live="polite"></p>
             </div>
         </section>
     </main>

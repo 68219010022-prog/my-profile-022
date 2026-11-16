@@ -133,6 +133,16 @@ h1 span {
     font-size: 1.08rem;
 }
 
+.visitor-welcome {
+    margin: -12px 0 20px;
+    color: var(--accent-dark);
+    font-weight: 600;
+}
+
+.visitor-welcome:empty {
+    display: none;
+}
+
 .button {
     display: inline-flex;
     min-height: 48px;
@@ -209,6 +219,29 @@ h1 span {
 
 .about-card p:last-child {
     margin-bottom: 0;
+}
+
+.estimator-card {
+    max-width: 780px;
+    padding: 28px 32px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper);
+    color: var(--muted);
+}
+
+.estimator-card > p:first-child {
+    margin-bottom: 18px;
+}
+
+.estimator-result {
+    margin: 14px 0 0;
+    color: var(--accent-dark);
+    font-weight: 600;
+}
+
+.estimator-result:empty {
+    display: none;
 }
 
 .motto {
@@ -433,6 +466,10 @@ h1 span {
     }
 
     .about-card {
+        padding: 22px;
+    }
+
+    .estimator-card {
         padding: 22px;
     }
 
