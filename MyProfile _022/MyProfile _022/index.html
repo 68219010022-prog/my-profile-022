@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,24 @@
     <title>ยศกร หมู่สกุล | Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="site-header">
         <nav class="site-nav container" aria-label="เมนูหลัก">
             <a class="brand" href="#home">YOSAKORN<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">เกี่ยวกับฉัน</a></li>
-                <li><a href="#skills">ทักษะ</a></li>
-                <li><a href="#projects">ผลงาน</a></li>
-                <li><a href="#estimator">ประเมินราคา</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about">เกี่ยวกับฉัน</a></li>
+                    <li><a href="#skills">ทักษะ</a></li>
+                    <li><a href="#projects">ผลงาน</a></li>
+                    <li><a href="#estimator">ประเมินราคา</a></li>
+                </ul>
+                <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="สลับโหมดมืดหรือโหมดสว่าง"
+                    aria-pressed="false" title="สลับโหมด">
+                    <span class="theme-icon" id="themeIcon" aria-hidden="true">🌙</span>
+                    <span class="theme-text" id="themeText">โหมดมืด</span>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -57,9 +66,15 @@
             <p class="eyebrow">สิ่งที่กำลังเรียนรู้</p>
             <h2 id="skills-title">Skills</h2>
             <ul class="skills-list">
-                <li><span class="skill-mark">01</span><span><strong>HTML</strong><small>จัดโครงสร้างเนื้อหาเว็บไซต์</small></span></li>
-                <li><span class="skill-mark">02</span><span><strong>CSS</strong><small>ตกแต่งและจัดรูปแบบหน้าเว็บ</small></span></li>
-                <li><span class="skill-mark">03</span><span><strong>JavaScript</strong><small>เพิ่มการโต้ตอบให้กับเว็บไซต์</small></span></li>
+                <li><span
+                        class="skill-mark">01</span><span><strong>HTML</strong><small>จัดโครงสร้างเนื้อหาเว็บไซต์</small></span>
+                </li>
+                <li><span
+                        class="skill-mark">02</span><span><strong>CSS</strong><small>ตกแต่งและจัดรูปแบบหน้าเว็บ</small></span>
+                </li>
+                <li><span
+                        class="skill-mark">03</span><span><strong>JavaScript</strong><small>เพิ่มการโต้ตอบให้กับเว็บไซต์</small></span>
+                </li>
             </ul>
         </section>
 
@@ -67,22 +82,92 @@
             <div class="container">
                 <p class="eyebrow">สิ่งที่ได้ลงมือทำ</p>
                 <h2 id="projects-title">Projects</h2>
-                <article class="project-card">
-                    <div class="project-number" aria-hidden="true">01</div>
-                    <div>
-                        <p class="project-type">เว็บไซต์แนะนำตัว</p>
-                        <h3>My Developer Portfolio</h3>
-                        <p>
-                            เว็บไซต์แนะนำตัวที่รวบรวมข้อมูลเบื้องต้น ทักษะที่สนใจ และผลงาน
-                            สร้างด้วย HTML, CSS และ JavaScript พร้อมเมนูนำทางไปยังแต่ละส่วน
-                        </p>
-                        <ul class="tag-list" aria-label="เทคโนโลยีที่ใช้">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                        </ul>
-                    </div>
-                </article>
+
+                <!-- Project Filter Controls -->
+                <div class="project-filter-bar" role="group" aria-label="กรองหมวดหมู่ผลงาน">
+                    <button class="filter-btn active" type="button" data-filter="all">ทั้งหมด (All)</button>
+                    <button class="filter-btn" type="button" data-filter="web">Web Development</button>
+                    <button class="filter-btn" type="button" data-filter="app">Web Application</button>
+                    <button class="filter-btn" type="button" data-filter="design">UI/UX Design</button>
+                </div>
+
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- โครงงานเดิม (Project 01) -->
+                    <article class="project-card" data-category="web">
+                        <div class="project-number" aria-hidden="true">01</div>
+                        <div>
+                            <p class="project-type">เว็บไซต์แนะนำตัว</p>
+                            <h3>My Developer Portfolio</h3>
+                            <p>
+                                เว็บไซต์แนะนำตัวที่รวบรวมข้อมูลเบื้องต้น ทักษะที่สนใจ และผลงาน
+                                สร้างด้วย HTML, CSS และ JavaScript พร้อมเมนูนำทางไปยังแต่ละส่วน
+                            </p>
+                            <ul class="tag-list" aria-label="เทคโนโลยีที่ใช้">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- โครงงานเพิ่มเติมสำหรับทดสอบระบบกรองหมวดหมู่ (Project 02) -->
+                    <article class="project-card" data-category="app">
+                        <div class="project-number" aria-hidden="true">02</div>
+                        <div>
+                            <p class="project-type">ระบบคำนวณและประเมินผล</p>
+                            <h3>Interactive Service Cost Estimator</h3>
+                            <p>
+                                เครื่องมือคำนวณราคาค่าบริการทำเว็บไซต์แบบไดนามิก รองรับการคำนวณตามจำนวนหน้า
+                                พร้อมการตรวจสอบข้อมูลและรายงานผลลัพธ์แบบเรียลไทม์
+                            </p>
+                            <ul class="tag-list" aria-label="เทคโนโลยีที่ใช้">
+                                <li>JavaScript</li>
+                                <li>DOM Manipulation</li>
+                                <li>Validation</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- โครงงานเพิ่มเติมสำหรับทดสอบระบบกรองหมวดหมู่ (Project 03) -->
+                    <article class="project-card" data-category="design">
+                        <div class="project-number" aria-hidden="true">03</div>
+                        <div>
+                            <p class="project-type">การออกแบบส่วนติดต่อผู้ใช้</p>
+                            <h3>Clean & Minimal Design System</h3>
+                            <p>
+                                งานออกแบบระบบส่วนต่อประสาน (UI System) ที่เน้นความเรียบง่าย สบายตา
+                                พร้อมระบบคู่สี Light / Dark Theme และ Typography ที่อ่านง่ายบนทุกอุปกรณ์
+                            </p>
+                            <ul class="tag-list" aria-label="เทคโนโลยีที่ใช้">
+                                <li>UI/UX Design</li>
+                                <li>Responsive Layout</li>
+                                <li>CSS Variables</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- โครงงานเพิ่มเติมสำหรับทดสอบระบบกรองหมวดหมู่ (Project 04) -->
+                    <article class="project-card" data-category="app">
+                        <div class="project-number" aria-hidden="true">04</div>
+                        <div>
+                            <p class="project-type">มินิเว็บแอปพลิเคชัน</p>
+                            <h3>Personal Task Tracker</h3>
+                            <p>
+                                แอปจัดการและติดตามรายการสิ่งที่ต้องทำในแต่ละวัน รองรับการจัดหมวดหมู่งาน
+                                การบันทึกสถานะเสร็จสิ้น และการเก็บข้อมูลด้วย Local Storage
+                            </p>
+                            <ul class="tag-list" aria-label="เทคโนโลยีที่ใช้">
+                                <li>HTML5</li>
+                                <li>CSS Grid</li>
+                                <li>JavaScript LocalStorage</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="no-projects-msg" id="noProjectsMsg" style="display: none;" aria-live="polite">
+                    ไม่พบผลงานในหมวดหมู่นี้
+                </p>
             </div>
         </section>
 
@@ -105,4 +190,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
